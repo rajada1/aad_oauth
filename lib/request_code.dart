@@ -36,6 +36,7 @@ class RequestCode {
     await controller.setBackgroundColor(Colors.transparent);
     await controller.setUserAgent(_config.userAgent);
     await controller.loadRequest(launchUri);
+    await controller.enableZoom(false);
     if (_config.onPageFinished != null) {
       await controller.setNavigationDelegate(
         NavigationDelegate(
